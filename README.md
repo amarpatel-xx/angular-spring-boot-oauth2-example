@@ -4,21 +4,29 @@ This project contains examples that use angular-auth-oidc-client and Spring Boot
 # Steps to run examples in development environment (using Keycloak):
 
 ## Running Keycloak Docker Container:
+```shell
 cd keycloak
 docker compose -f keycloak.yml up -d
+```
 
 # Start the Angular Client:
+```shell
 cd oauth2-client
 npm i
 npm run ng serve
+```
 
 # Start the Non-reactive Spring Boot Backend
+```shell
 cd resource-server
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
+```
 
 # Start the Reactive Spring Boot Backend
+```shell
 cd resource-server-webflux
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
+```
 
 # Using a Web-browser, Navigate to:
 http://localhost:4200
